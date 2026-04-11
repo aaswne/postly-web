@@ -88,19 +88,6 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork the repo and submit a PR.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 🙌 Acknowledgements
 
 * Firebase
