@@ -1,0 +1,66 @@
+.api-reader {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.api-top {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.api-top input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.api-top button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+.response-section {
+  margin-top: 20px;
+}
+
+.response-box {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.api-block {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.api-block h4 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.api-item {
+  margin-bottom: 8px;
+  padding-left: 10px;
+  border-left: 3px solid #e5e7eb;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
