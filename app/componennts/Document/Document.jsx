@@ -1,7 +1,15 @@
-import React from "react";
+"use client";
+
 import "./Document.css";
+import { useRouter } from "next/navigation";
 
 function Document() {
+  const router = useRouter();
+
+  const startConvert = () => {
+    router.push("/Login");
+  };
+
   return (
     <div className="document">
       <div className="content">
@@ -11,8 +19,11 @@ function Document() {
           Built for developers who want speed and simplicity.
         </p>
 
-        <button className="cta">Start Converting</button>
+        <button onClick={startConvert} className="cta">
+          Start Converting
+        </button>
       </div>
+
       <div className="section">
         <h2>FOR DEVELOPERS</h2>
         <p>

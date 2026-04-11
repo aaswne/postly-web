@@ -1,5 +1,9 @@
-import { initializeApp } from "firebase/app";
+
+
+import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage"; // ✅ ADD THIS
 
 const firebaseConfig = {
   apiKey: "AIzaSyCWSFjSxkN7j6JuHPzQcxlIGRzRZQAr1YQ",
@@ -11,8 +15,14 @@ const firebaseConfig = {
   measurementId: "G-9Z0ERRR9XM",
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+// ✅ prevent duplicate init (Next.js fix)
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-export { auth };
+// ✅ services
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app); // ✅ ADD THIS
+
+// ✅ export all
+export { auth, db, storage };
 export default app;

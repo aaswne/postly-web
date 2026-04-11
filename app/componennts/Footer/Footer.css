@@ -17,6 +17,7 @@
 
 .footer-brand h2 {
   margin-bottom: 10px;
+  color: black;
 }
 
 .footer-brand p {
@@ -50,7 +51,7 @@
 }
 
 .footer-column a:hover {
-  color: white;
+  color: WHI;
   background-color: black;
 }
 
