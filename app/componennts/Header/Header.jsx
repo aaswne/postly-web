@@ -18,8 +18,8 @@ function Header({ handleButton }) {
       <div className="desktop">
         <Link href="/SignUp">Sign Up</Link>
         <Link href="/Login">Sign In</Link>
-        <Link href="/documentation">Documentation</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/Progress">Documentation</Link>
+        <Link href="/Progress">Contact</Link>
       </div>
     </div>
   );

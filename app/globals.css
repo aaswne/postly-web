@@ -60,7 +60,7 @@ body {
 }
 
 .login-form input {
-  width: 90%;
+  width: 99%;
   padding: 12px 14px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -176,7 +176,7 @@ body {
   }
 
   .login-form input {
-    width: 90%;
+    width: 99%;
     padding: 12px 14px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -458,3 +458,57 @@ textarea {
 }
 
 /* PROFILE SECTION ENDS HERE  */
+
+
+/* PROGRESS SECTION STARTS HERE  */
+.wip-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 20px;
+}
+
+.wip-card {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.wip-card h1 {
+  margin-bottom: 10px;
+}
+
+.wip-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.wip-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wip-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wip-buttons button:first-child {
+  background: #2563eb;
+  color: white;
+}
+
+.wip-buttons button:last-child {
+  background: #e2e8f0;
+}
+/* PROGRESS SECTION ENDS HERE  */
