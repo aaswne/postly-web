@@ -257,7 +257,7 @@ textarea {
 
 .copyCode {
   display: flex;
-  position: fixed;
+  position: absolute;
   right: 19;
 }
 

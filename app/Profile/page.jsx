@@ -1,7 +1,7 @@
 "use client";
 
 import { auth, db, storage } from "../Config/config";
-
+import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
@@ -11,6 +11,8 @@ function Page() {
   const [userId, setUserId] = useState(null);
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
+
+  const route =useRouter()
 
   const fileInputRef = useRef();
 
@@ -183,7 +185,9 @@ function Page() {
               Save Details
             </button>
 
-            <button className="profile-btn cancel-btn">
+            <button onClick={()=>{
+route.push("./Dashboard")
+            }} className="profile-btn cancel-btn">
               Cancel
             </button>
           </div>

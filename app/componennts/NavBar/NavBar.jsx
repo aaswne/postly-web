@@ -66,7 +66,7 @@ function NavBar({ darkModeToggle, darkMode, show, buttonClick }) {
 
         <div className="profile">
           <img
-          style={{backgroundColor:"black"}}
+          src="https://picsum.photos/400/300"
             onClick={gotoProfile}
             className="profile-img"
           />

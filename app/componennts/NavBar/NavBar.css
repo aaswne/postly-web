@@ -73,7 +73,9 @@
   font-size: 14px;
   font-weight: 500;
 }
-
+.hamBurg{
+  display: none;
+}
 .span {
   font-size: 1rem;
   font-weight: 200;
@@ -90,9 +92,8 @@
   .profile-img {
     display: none;
   }
-}
 
-.hamBurg {
+  .hamBurg {
   font-size: 28px;
   background-color: transparent;
   border: none;
@@ -100,4 +101,13 @@
   color: white;
   right: -263px;
   z-index: 1000;
+  display: flex;
 }
+}
+
+
+
+
+
+
+
