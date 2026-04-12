@@ -211,6 +211,7 @@ body {
   padding: 20px;
   overflow-y: auto;
   color: white;
+    
 }
 
 .content-wrapper {
@@ -236,6 +237,15 @@ textarea {
   .textarea {
     height: 200px;
   }
+
+  .content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  color: white;
+  padding-top: 147px;
+}
+
 }
 
 /* Controls */
