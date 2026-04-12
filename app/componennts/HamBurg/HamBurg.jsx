@@ -1,14 +1,15 @@
 import "./HamBurg.css";
 import Link from "next/link";
 
-function HamBurg() {
+function HamBurg({ menuLinks, className = "" }) {
   return (
-    <div className="hamburg">
+    <div className={`hamburg ${className}`}>
       <ul className="hamburg-menu">
-        <li><Link href="/SignUp">Sign Up</Link></li>
-        <li><Link href="/Login">Sign In</Link></li>
-        <li><Link href="/Progress">Documentation</Link></li>
-        <li><Link href="/Progress">Contact</Link></li>
+        {menuLinks.map((item) => (
+          <li key={item.href}>
+            <Link href={item.href}>{item.label}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

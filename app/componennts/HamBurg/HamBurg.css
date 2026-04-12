@@ -19,6 +19,25 @@
     box-shadow: -2px 0 10px rgba(0,0,0,0.1);
   }
 
+   .hamburgg {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 70%;
+    height: 93vh;
+    background-color:#111827;
+    transition: right 0.3s ease;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    align-items: center;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  }
+
+ 
+ 
+
   /* 🔥 Modern content styling starts here */
 
   .hamburg-menu {
@@ -49,4 +68,4 @@
     color: white;
     transform: translateX(6px);
   }
-}
+  }

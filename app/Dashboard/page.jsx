@@ -1,7 +1,8 @@
 "use client";
 import SideBar from "../componennts/SideBar/SideBar";
-import NavBar from "../componennts/NavBar/NavBar"
-import Footer from "../componennts/Footer/Footer"
+import NavBar from "../componennts/NavBar/NavBar";
+import Footer from "../componennts/Footer/Footer";
+import HamBurg from "../componennts/HamBurg/HamBurg";
 import { useState } from "react";
 import { Builder } from "xml2js";
 
@@ -10,7 +11,7 @@ function Page() {
   const [convertedData, setConvertedData] = useState("");
   const [copy, setCopy] = useState(false);
   const [convertTo, setConvertTo] = useState("xml"); // default
-
+  const [show, setShow] = useState(false);
 
   // select change
   const optionsClick = (e) => {
@@ -48,7 +49,7 @@ function Page() {
         const keys = Object.keys(jsonData[0]);
 
         const rows = jsonData.map((obj) =>
-          keys.map((key) => obj[key]).join(",")
+          keys.map((key) => obj[key]).join(","),
         );
 
         const csv = [keys.join(","), ...rows].join("\n");
@@ -71,40 +72,53 @@ function Page() {
     }, 2000);
   };
 
-//   DOWNLODE
+  //   DOWNLODE
 
-const handleDownload = () => {
-  if (!convertedData) return;
+  const handleDownload = () => {
+    if (!convertedData) return;
 
-  const fileType = convertTo === "xml" ? "application/xml" : "text/csv";
-  const fileExtension = convertTo === "xml" ? "xml" : "csv";
+    const fileType = convertTo === "xml" ? "application/xml" : "text/csv";
+    const fileExtension = convertTo === "xml" ? "xml" : "csv";
 
-  const blob = new Blob([convertedData], { type: fileType });
-  const url = URL.createObjectURL(blob);
+    const blob = new Blob([convertedData], { type: fileType });
+    const url = URL.createObjectURL(blob);
 
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `converted.${fileExtension}`;
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `converted.${fileExtension}`;
 
-  link.click();
+    link.click();
 
-  URL.revokeObjectURL(url);
-};
+    URL.revokeObjectURL(url);
+  };
 
-const darkModeToggle = ()=>{
-setDarkMode(!darkMode)
-}
+  const darkModeToggle = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const menuLinks = [
+    { href: "/Profile", label: "Profile" },
+    { href: "/documents", label: "Documents" },
+    { href: "/how-to-use", label: "How to Use" },
+    { href: "/help", label: "Help" },
+    
+  ];
+
+  const buttonClick = () => {
+    setShow(!show);
+  };
 
   return (
-    <div className="dashboard"style={{background:"#111827"}} >
+    <div className="dashboard" style={{ background: "#111827" }}>
       <SideBar />
 
       <div className="main">
-<NavBar  />
+        <NavBar show={show} buttonClick={buttonClick} />
         <div className="content-wrapper">
           <div className="content">
             <h2>API Data Converter</h2>
-
+{show &&             <HamBurg menuLinks={menuLinks} className="hamburgg" />
+}
             <div className="converter">
               <textarea
                 value={data}
@@ -126,7 +140,7 @@ setDarkMode(!darkMode)
               </select>
 
               <button onClick={handleConvert}>Convert</button>
-              <button onClick={handleDownload} >Download</button>
+              <button onClick={handleDownload}>Download</button>
 
               {convertedData && (
                 <button onClick={copyText} className="copyCode">
@@ -136,8 +150,7 @@ setDarkMode(!darkMode)
             </div>
           </div>
         </div>
-              <Footer/>
-
+        <Footer />
       </div>
     </div>
   );

@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import { auth, db } from "../../Config/config";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
 
-function NavBar({ darkModeToggle, darkMode }) {
+function NavBar({ darkModeToggle, darkMode, show, buttonClick }) {
   const router = useRouter();
   const [profileImage, setProfileImage] = useState(null);
 
@@ -36,8 +38,13 @@ function NavBar({ darkModeToggle, darkMode }) {
     return () => unsubscribe();
   }, []);
 
+
+
+
+
   return (
     <header className="header" >
+      
       <div className="header-left">
         <h2 className="logo">
           Postly <span className="span">– simplify your API data</span>
@@ -45,13 +52,14 @@ function NavBar({ darkModeToggle, darkMode }) {
 
         <nav
           className="nav-links"
-        
         >
           <a href="/documents">Documents</a>
           <a href="/how-to-use">How to Use</a>
           <a href="/help">Help</a>
         </nav>
+
       </div>
+
 
       <div className="header-right">
        
@@ -63,7 +71,11 @@ function NavBar({ darkModeToggle, darkMode }) {
             className="profile-img"
           />
         </div>
+                            <button className="hamBurg" onClick={buttonClick} >{show?<RxCross2/>:<RxHamburgerMenu/>}</button>
+
+        
       </div>
+
     </header>
   );
 }

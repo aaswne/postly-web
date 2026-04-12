@@ -1,11 +1,13 @@
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  position: fixed;
   padding: 16px 24px;
-
   color: white;
   border-bottom: 1px solid #2d3748;
+  background-color: #111827;
+  align-items: center;
 }
 
 .header-left {
@@ -84,4 +86,18 @@
   .nav-links {
     display: none;
   }
+
+  .profile-img {
+    display: none;
+  }
+}
+
+.hamBurg {
+  font-size: 28px;
+  background-color: transparent;
+  border: none;
+  font-weight: 100;
+  color: white;
+  right: -263px;
+  z-index: 1000;
 }

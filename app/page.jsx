@@ -14,10 +14,18 @@ export default function Home() {
     setShowSide(!showSide);
   };
 
+
+  const menuLinks = [
+    { href: "/SignUp", label: "Sign Up" },
+    { href: "/Login", label: "Sign In" },
+    { href: "/Progress", label: "Documentation" },
+    { href: "/Contact", label: "Contact" },
+  ];
+
   return (
     <div className="main">
       <Header handleButton={handleButton} showSide={showSide} />
-      {showSide && <HamBurg />}
+      {showSide && <HamBurg menuLinks={menuLinks}/>}
       <Document />
       <Footer />
     </div>
