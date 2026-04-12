@@ -37,7 +37,7 @@ function NavBar({ darkModeToggle, darkMode }) {
   }, []);
 
   return (
-    <header className="header" style={{ color: darkMode ? "white" : "black" }}>
+    <header className="header" >
       <div className="header-left">
         <h2 className="logo">
           Postly <span className="span">– simplify your API data</span>
@@ -45,7 +45,7 @@ function NavBar({ darkModeToggle, darkMode }) {
 
         <nav
           className="nav-links"
-          style={{ color: darkMode ? "white" : "black" }}
+        
         >
           <a href="/documents">Documents</a>
           <a href="/how-to-use">How to Use</a>
@@ -54,15 +54,12 @@ function NavBar({ darkModeToggle, darkMode }) {
       </div>
 
       <div className="header-right">
-        <button onClick={darkModeToggle} className="darkmode-btn">
-          {darkMode ? "🌙" : "☀️"}
-        </button>
+       
 
         <div className="profile">
           <img
+          style={{backgroundColor:"black"}}
             onClick={gotoProfile}
-            src={profileImage || "https://via.placeholder.com/40"}
-            alt="Profile"
             className="profile-img"
           />
         </div>

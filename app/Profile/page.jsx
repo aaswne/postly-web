@@ -101,10 +101,10 @@ function Page() {
         <div className="profile-left">
           <div className="profile-image-wrapper">
             <img
-              src={preview || "https://via.placeholder.com/150"}
-              alt="Profile"
-              className="profile-image"
-            />
+  src={preview || "https://i.pravatar.cc/150?img=50"}
+  alt="Profile"
+  className="profile-image"
+/>
           </div>
 
           {/* hidden input */}
@@ -119,7 +119,7 @@ function Page() {
             onClick={() => fileInputRef.current.click()}
             className="profile-btn upload-btn"
           >
-            Add Image
+            Add Image (coming soon)
           </button>
 
           {/* (basic placeholder for crop) */}

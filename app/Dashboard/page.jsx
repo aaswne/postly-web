@@ -10,7 +10,7 @@ function Page() {
   const [convertedData, setConvertedData] = useState("");
   const [copy, setCopy] = useState(false);
   const [convertTo, setConvertTo] = useState("xml"); // default
-  const [darkMode, setDarkMode]=useState(false)
+
 
   // select change
   const optionsClick = (e) => {
@@ -96,11 +96,11 @@ setDarkMode(!darkMode)
 }
 
   return (
-    <div className="dashboard" style={{backgroundColor:darkMode?"#111827":"#F8F5F0", color:darkMode?"white":"black"}} >
+    <div className="dashboard"style={{background:"#111827"}} >
       <SideBar />
 
       <div className="main">
-<NavBar darkModeToggle={darkModeToggle} darkMode={darkMode} />
+<NavBar  />
         <div className="content-wrapper">
           <div className="content">
             <h2>API Data Converter</h2>
