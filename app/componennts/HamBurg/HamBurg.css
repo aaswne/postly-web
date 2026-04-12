@@ -1,0 +1,52 @@
+.hamburg {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburg {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 8vh;
+    right: 0;
+    width: 70%;
+    height: 93vh;
+    background-color: white;
+    transition: right 0.3s ease;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    align-items: center;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  }
+
+  /* 🔥 Modern content styling starts here */
+
+  .hamburg-menu {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .hamburg-menu li {
+    margin: 12px 0;
+  }
+
+  .hamburg-menu a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #f5f7fa;
+    transition: all 0.25s ease;
+  }
+
+  .hamburg-menu a:hover {
+    background: #007bff;
+    color: white;
+    transform: translateX(6px);
+  }
+}

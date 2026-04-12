@@ -65,3 +65,15 @@ a:hover {
     display: none;
   }
 }
+
+.hamburgButton{
+  font-size:30px;
+  background-color: transparent;
+  border: none;
+  font-weight: 100;
+}
+
+.hamburgButton.active {
+  transform: rotate(180deg);
+}
+

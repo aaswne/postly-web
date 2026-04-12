@@ -1,18 +1,24 @@
 "use client";
 
 import "./Header.css";
-import HamburgButton from "../../font/font";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
+
 import Link from "next/link";
 
-function Header({ handleButton }) {
+function Header({ handleButton, showSide }) {
   return (
     <div className="header">
       <div className="left">
         <h2>Postly</h2>
       </div>
 
-      <div className="right">
-        <HamburgButton className="hamburg" onClick={handleButton} />
+      <div className="right" onClick={handleButton}>
+        <button
+  className={`hamburgButton ${showSide ? "active" : ""}`}
+>
+  {showSide ? <RxCross2 /> : <RxHamburgerMenu />}
+</button>
       </div>
 
       <div className="desktop">
