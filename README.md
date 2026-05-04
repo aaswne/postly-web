@@ -24,12 +24,6 @@
 
 ---
 
-## 📸 Screenshots
-
-*Add your app screenshots here*
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
